@@ -1,6 +1,6 @@
 language: java
 sudo: true
-dist: alpine
+dist: trusty
 #distro may be wrong. Check this if we have issues
 jdk: oraclejdk9
 addons:
