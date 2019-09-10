@@ -2,5 +2,5 @@
 #!/bin/sh
 
 # Install kubernetes and set config
-#gcloud 
-#gcloud components install kubectl
+yes | gcloud components update
+yes | gcloud components install kubectl
