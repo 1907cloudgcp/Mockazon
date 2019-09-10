@@ -26,5 +26,6 @@ before_install:
  - gcloud components update kubectl
  - gcloud version
 install: true
-script: true
+script: 
+ - ./install.sh
 # - ./deploy.sh
