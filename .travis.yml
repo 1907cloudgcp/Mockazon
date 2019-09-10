@@ -16,6 +16,7 @@ before_install:
  - chmod +x mvnw
  - chmod +x ./install.sh
  - chmod +x ./deploy.sh
+ - chmod +x ./configure.sh
 # - ./install.sh
 # - if [ ! -d $HOME/google-cloud-sdk/bin ]; then
 #  rm -rf $HOME/google-cloud-sdk;
@@ -27,4 +28,7 @@ before_install:
 # install: true
 script: 
  - ./install.sh
+ - gcloud auth activate-service-ac0count --key-file $GOOGLE_APPLICATION_CREDENTIALS
+ - ./configure.sh
+after_success:
  - ./deploy.sh
