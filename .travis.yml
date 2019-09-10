@@ -20,7 +20,7 @@ before_install:
   curl https://sdk.cloud.google.com | bash > /dev/null;
   fi
  - source $HOME/google-cloud-sdk/path.bash.inc
- - gcloud components update kubectl
+ - y | gcloud components update kubectl
  - gcloud version
 # install: true
 # script: 
