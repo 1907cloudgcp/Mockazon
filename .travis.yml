@@ -15,13 +15,13 @@ addons:
 before_install:
  - chmod +x mvnw
 # - ./install.sh
- - if [ ! -d $HOME/google-cloud-sdk/bin ]; then
-  rm -rf $HOME/google-cloud-sdk;
-  curl https://sdk.cloud.google.com | bash > /dev/null;
-  fi
- - source $HOME/google-cloud-sdk/path.bash.inc
- - gcloud components update kubectl -y
- - gcloud version
+# - if [ ! -d $HOME/google-cloud-sdk/bin ]; then
+#  rm -rf $HOME/google-cloud-sdk;
+#  curl https://sdk.cloud.google.com | bash > /dev/null;
+#  fi
+# - source $HOME/google-cloud-sdk/path.bash.inc
+# - gcloud components update kubectl -y
+# - gcloud version
 # install: true
 # script: 
 # - ./install.sh
