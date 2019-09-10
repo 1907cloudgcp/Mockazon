@@ -11,10 +11,10 @@ services:
 env:
   global:
    - CLOUDSDK_CORE_DISABLE_PROMPTS=1
-   - ENV DATABASE_NAME="postgres"
-   - ENV JDBC_SCHEMA="mockazon"
-   - ENV JDBC_URL="35.192.64.159"
-   - ENV JDBC_USERNAME="postgres"
+   - DATABASE_NAME="postgres"
+   - JDBC_SCHEMA="mockazon"
+   - JDBC_URL="35.192.64.159"
+   - JDBC_USERNAME="postgres"
 addons:
  apt:
    packages:
@@ -29,7 +29,7 @@ before_install:
  - source $HOME/google-cloud-sdk/path.bash.inc
  - gcloud components update kubectl
  - gcloud version
-install: true
-script: 
+# install: true
+# script: 
 # - ./install.sh
 # - ./deploy.sh
