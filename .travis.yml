@@ -15,7 +15,6 @@ env:
    - ENV JDBC_SCHEMA="mockazon"
    - ENV JDBC_URL="35.192.64.159"
    - ENV JDBC_USERNAME="postgres"
-   - ENV JDBC_PASSWORD="password"
 addons:
  apt:
    packages:
