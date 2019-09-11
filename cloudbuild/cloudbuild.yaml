@@ -1,6 +1,6 @@
 steps:
-- name: "gcr.io/cloud-builders/gcloud"
-  args: ["app", "deploy", "../app.yaml"]
+- name: "gcr.io/cloud-builders/mvn"
+  args: ["install"]
   env: ['DATABASE_NAME=postgres', 'JDBC_SHEMA=mockazon', 'JDBC_URL=104.154.244.24', 'JDBC_USERNAME=postgres']
   secretEnv: ['JDBC_PASSWORD']
 

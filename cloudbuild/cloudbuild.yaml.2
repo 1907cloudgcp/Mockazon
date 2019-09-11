@@ -1,11 +1,8 @@
 steps:
-- name: "gcr.io/cloud-builders/mvn"
-  args: ["install"]
+- name: "gcr.io/cloud-builders/gcloud"
+  args: ["app", "deploy", "../app.yaml"]
   env: ['DATABASE_NAME=postgres', 'JDBC_SHEMA=mockazon', 'JDBC_URL=104.154.244.24', 'JDBC_USERNAME=postgres']
   secretEnv: ['JDBC_PASSWORD']
-- name: "gcr.io/cloud-builders/docker"
-  args: ['build', '--tag=gcr.io/Mockazon/mockazon', '.']
-- name:
 
 secrets:
 - kmsKeyName: projects/mockazon/locations/us-central1/keyRings/mockazon_ring/cryptoKeys/sql_pass/cryptoKeyVersions/1
