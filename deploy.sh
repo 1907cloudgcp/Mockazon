@@ -23,4 +23,5 @@ yes | gcloud components install kubectl
 
 #docker build -t gcr.io/gcpdemosbmongeon/mockazon:v1.0
 #docker push gcr.io/gcpdemosbmongeon/mockazon:v1.0
+echo "k8s.yml"
 kubectl apply -f k8s.yml
