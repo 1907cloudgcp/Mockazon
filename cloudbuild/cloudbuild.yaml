@@ -4,6 +4,6 @@ steps:
   env: ['DATABASE_NAME=postgres', 'JDBC_SHEMA=mockazon', 'JDBC_URL=104.154.244.24', 'JDBC_USERNAME=postgres']
   secretEnv: ['JDBC_PASSWORD']
 secrets:
-- kmsKeyName: projects/mockazon/locations/us-central1/keyRings/mockazon_ring/cryptoKeys/sql_pass/cryptoKeyVersions/1
+- kmsKeyName: projects/mockazon/locations/us-central1/keyRings/mockazon_ring/cryptoKeys/sql_pass
   secretEnv:
     JDBC_PASSWORD: CiQAhVODvCQ4t5elvxyMNAPeXa4ximwHZcWbnC9vx+/tBe6g1YgSMgAGs0PO9/mZIwMnYpvhHnX0dW8xNZQhp8UafNI1M2q1pR+0K2sd64A3nXeoIeCaLYcR
