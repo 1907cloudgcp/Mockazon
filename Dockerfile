@@ -3,6 +3,7 @@ ENV DATABASE_NAME="postgres"
 ENV JDBC_SCHEMA="mockazon"
 ENV JDBC_URL="35.192.64.159"
 ENV JDBC_USERNAME="postgres"
+ENV JDBS_PASSWORD=jdbc-password
 COPY . /app
 WORKDIR /app
 RUN mvn install
