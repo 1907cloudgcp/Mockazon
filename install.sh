@@ -11,4 +11,4 @@ fi
 source $HOME/google-cloud-sdk/path.bash.inc
 
 # yes | gcloud components update
-yes | gcloud components update kubectl
+yes | gcloud components install kubectl
