@@ -6,4 +6,4 @@ steps:
 secrets:
 - kmsKeyName: projects/mockazon/locations/us-central1/keyRings/mockazon_ring/cryptoKeys/sql_pass
   secretEnv:
-    JDBC_PASSWORD: CiQAhVODvCQ4t5elvxyMNAPeXa4ximwHZcWbnC9vx+/tBe6g1YgSMgAGs0PO9/mZIwMnYpvhHnX0dW8xNZQhp8UafNI1M2q1pR+0K2sd64A3nXeoIeCaLYcR
+    JDBC_PASSWORD: CiQAhVODvP6royI1AbxiWUu2zJFOoFiXgNQPafiSiEi2zw0UUdISMgAGs0POZPydkTqjG9ylueomOKakHw/aWZKSG72ts5zEQTg0I/eBAOZd2lBITBZZdVpt
