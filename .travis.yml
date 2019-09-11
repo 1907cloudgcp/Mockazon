@@ -1,0 +1,35 @@
+language: java
+sudo: true
+dist: trusty
+#trusty may be the incorrect distro. Check this if there are problems
+jdk: oraclejdk9
+cache:
+  directories:
+   - $HOME/google-cloud-sdk
+services:
+ - docker
+addons:
+ apt:
+   packages:
+     - oracle-java9-installer
+before_install:
+ - chmod +x mvnw
+ - chmod +x ./install.sh
+ - chmod +x ./configure.sh
+ - chmod +x ./deploy.sh
+ - openssl aes-256-cbc -K $encrypted_b853e1ba22a9_key -iv $encrypted_b853e1ba22a9_iv -in gcpdemosbmongeon-e25e1414c004.json.enc -out gcpdemosbmongeon-e25e1414c004.json -d
+# - ./install.sh
+# - if [ ! -d $HOME/google-cloud-sdk/bin ]; then
+#  rm -rf $HOME/google-cloud-sdk;
+#  curl https://sdk.cloud.google.com | bash > /dev/null;
+#  fi
+# - source $HOME/google-cloud-sdk/path.bash.inc
+# - gcloud components update kubectl -y
+# - gcloud version
+# install: true
+script: 
+ - ./install.sh
+ - gcloud auth activate-service-account --key-file=gcpdemosbmongeon-e25e1414c004.json
+ - ./configure.sh
+after_success:
+ - ./deploy.sh
