@@ -11,7 +11,7 @@
 # source $HOME/google-cloud-sdk/path.bash.inc
 
 # # yes | gcloud components update
-# yes | gcloud components install kubectl
+yes | gcloud components install kubectl
 
 # gcloud auth activate-service-account --key-file=gcpdemosbmongeon-e25e1414c004.json
 
