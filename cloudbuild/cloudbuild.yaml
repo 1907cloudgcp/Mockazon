@@ -10,5 +10,5 @@ secrets:
    JDBC_PASSWORD: CiQAhVODvHxABquKxYI7E6J2f3U1PZHoPHdxUAwMXxEOrw+c14oSMQAGs0POUErRCdkavN3Ftj1/
 e/mcoOtpxBkTFOQLquwjCYUDkFau2+x2gJRlNVq7Upw=
 
-timeout: "600s"
+# timeout: "600s"
 
