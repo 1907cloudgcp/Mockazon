@@ -1,0 +1,17 @@
+steps:
+- name: "gcr.io/cloud-builders/mvn"
+  args: ["install"]
+  env: ['DATABASE_NAME=postgres', 'JDBC_SHEMA=mockazon', 'JDBC_URL=104.154.244.24', 'JDBC_USERNAME=postgres']
+  secretEnv: ['JDBC_PASSWORD']
+- name: "gcr.io/cloud-builders/docker"
+  args: ['build', '--tag=gcr.io/Mockazon/mockazon', '.']
+- name:
+
+secrets:
+- kmsKeyName: projects/mockazon/locations/us-central1/keyRings/mockazon_ring/cryptoKeys/sql_pass/cryptoKeyVersions/1
+  secretEnv:
+   JDBC_PASSWORD: CiQAhVODvHxABquKxYI7E6J2f3U1PZHoPHdxUAwMXxEOrw+c14oSMQAGs0POUErRCdkavN3Ftj1/
+e/mcoOtpxBkTFOQLquwjCYUDkFau2+x2gJRlNVq7Upw=
+
+timeout: "600s"
+
