@@ -17,5 +17,5 @@ before_install:
  - chmod +x ./configure.sh
  - chmod +x ./deploy.sh
  - openssl aes-256-cbc -K $encrypted_b853e1ba22a9_key -iv $encrypted_b853e1ba22a9_iv -in gcpdemosbmongeon-e25e1414c004.json.enc -out gcpdemosbmongeon-e25e1414c004.json -d
-after_success:
+#after_success:
  - ./deploy.sh
