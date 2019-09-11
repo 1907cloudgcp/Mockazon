@@ -3,20 +3,20 @@
 
 # Install kubernetes and set config
 
-if [ ! -d "$HOME/google-cloud-sdk/bin" ]; then
-  rm -rf "$HOME/google-cloud-sdk"
-  curl https://sdk.cloud.google.com | bash > /dev/null
-fi
+# if [ ! -d "$HOME/google-cloud-sdk/bin" ]; then
+#   rm -rf "$HOME/google-cloud-sdk"
+#   curl https://sdk.cloud.google.com | bash > /dev/null
+# fi
 
-source $HOME/google-cloud-sdk/path.bash.inc
+# source $HOME/google-cloud-sdk/path.bash.inc
 
-# yes | gcloud components update
-yes | gcloud components install kubectl
+# # yes | gcloud components update
+# yes | gcloud components install kubectl
 
-gcloud auth activate-service-account --key-file=gcpdemosbmongeon-e25e1414c004.json
+# gcloud auth activate-service-account --key-file=gcpdemosbmongeon-e25e1414c004.json
 
-gcloud config set project gcpdemosbmongeon
-gcloud container clusters get-credentials mockazon --zone us-central1-a --project gcpdemosbmongeon
+# gcloud config set project gcpdemosbmongeon
+# gcloud container clusters get-credentials mockazon --zone us-central1-a --project gcpdemosbmongeon
 # gcloud auth configure-docker
 
 #docker build -t gcr.io/gcpdemosbmongeon/mockazon:v1.0
