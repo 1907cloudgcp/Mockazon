@@ -8,7 +8,7 @@
 #   curl https://sdk.cloud.google.com | bash > /dev/null
 # fi
 
-sudo apt-get install gcloud
+sudo apt-get install google-cloud-sdk
 
 source $HOME/google-cloud-sdk/path.bash.inc
 
