@@ -6,5 +6,5 @@ ENV JDBC_USERNAME="postgres"
 COPY . /app
 WORKDIR /app
 # RUN mvn install
-COPY Mockazon-0.0.1-SNAPSHOT.jar target/Mockazon-0.0.1-SNAPSHOT.jar
+COPY target/Mockazon-0.0.1-SNAPSHOT.jar target/Mockazon-0.0.1-SNAPSHOT.jar
 CMD java -jar target/Mockazon-0.0.1-SNAPSHOT.jar 
