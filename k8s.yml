@@ -14,7 +14,7 @@ spec:
       - name: mockazon
         image: gcr.io/gcpdemosbmongeon/mockazon:v1.0
         env:
-        - name: "JDBC_PASSWORD"
+        - name: JDBC_PASSWORD
           valueFrom:
             secretKeyRef:
               name: jdbc-password
