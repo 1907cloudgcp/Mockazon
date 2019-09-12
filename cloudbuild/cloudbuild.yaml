@@ -15,6 +15,6 @@ steps:
 secrets:
 - kmsKeyName: projects/mockazon/locations/us-central1/keyRings/mockazon_ring/cryptoKeys/sql_pass
   secretEnv:
-    JDBC_PASSWORD: CiQAhVODvPL3VYomhkxzxe8yy6UNdltNSgZydabedUWAJ52bPA4SMgAGs0POesnjLUz7IO+84hlzcjbPLeKzJecewYREDJa1GSaK5bjGVERls89XWlATMJbh
+    JDBC_PASSWORD: CiQAhVODvPtbGti6rQOhfUIQYFI1P0V6CaAevgnbpgSH2SEXnscSMgAGs0POy8+bDut9eo2h5uRWqFGqG3XseACt8Po9jYv+2eeY1gkAVhFlyKlN50/41Fok
 # timeout: "600s"
 
