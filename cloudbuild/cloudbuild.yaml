@@ -18,6 +18,7 @@ steps:
   args:
   - 'app'
   - 'deploy'
+  - 'uat/app.yaml'
   - '--image-url'
   - 'gcr.io/mockazon/uatimage:maven-env'
 images:
