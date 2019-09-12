@@ -3,9 +3,8 @@ ENV DATABASE_NAME="postgres"
 ENV JDBC_SCHEMA="mockazon"
 ENV JDBC_URL="35.192.64.159"
 ENV JDBC_USERNAME="postgres"
-RUN mkdir app
-COPY . /app
-WORKDIR /app
-# RUN mvn install
+RUN mkdir target
+COPY . .
+WORKDIR target
 COPY target/Mockazon-0.0.1-SNAPSHOT.jar target/Mockazon-0.0.1-SNAPSHOT.jar
-CMD java -jar target/Mockazon-0.0.1-SNAPSHOT.jar
+CMD ["java", "jar", "target/Mockazon-0.0.1-SNAPSHOT.jar"]
