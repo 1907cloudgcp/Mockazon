@@ -9,7 +9,7 @@ RUN echo ${DATABASE_NAME}
 RUN echo ${JDBC_SCHEMA}
 RUN echo ${JDBC_URL}
 RUN echo ${JDBC_USERNAME}
-RUN echo ${JDBC_PASSWORD}
+RUN echo ${JDBC_PASSWORD}${JDBC_SCHEMA}
 COPY . /app
 WORKDIR /app
 RUN mvn install
