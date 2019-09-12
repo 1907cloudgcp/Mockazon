@@ -10,8 +10,17 @@ steps:
   - 'gcr.io/mockazon/uatimage:maven-env'
   - '.'
   secretEnv: ['JDBC_PASSWORD']
+- name: 'gcr.io/cloud-builders/docker'
+  args:
+    - 'push'
+    - 'gcr.io/mockazon/uatimage:maven-env'
 - name: "gcr.io/cloud-builders/gcloud"
-  args: ["app", "deploy", "uat/app.yaml"]
+  args:
+  - 'app'
+  - 'deploy'
+  - 'uat/app.yaml'
+  - '--image-url'
+  - 'gcr.io/mockazon/uatimage:maven-env'
 images:
   - 'gcr.io/mockazon/uatimage:maven-env'
 secrets:
