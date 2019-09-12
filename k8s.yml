@@ -19,6 +19,14 @@ spec:
             secretKeyRef:
               name: jdbc-password
               key: key
+        - name: DATABASE_NAME
+          value: "postgres"
+        - name: JDBC_SCHEMA
+          value: "mockazon"
+        - name: JDBC_URL
+          value: "35.192.64.159"
+        - name: JDBC_USERNAME
+          value: "postgres"
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
