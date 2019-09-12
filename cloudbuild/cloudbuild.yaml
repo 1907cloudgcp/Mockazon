@@ -9,12 +9,13 @@ steps:
   - '-t'
   - 'uatimage:maven-env'
   - '.'
-  secretEnv: ['JDBC_PASSWORD']
+  env: ['JDBC_PASSWORD=${PASSWORD%?}']
+  secretEnv: ['PASSWORD']
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy", "uat/app.yaml"]
 secrets:
 - kmsKeyName: projects/mockazon/locations/us-central1/keyRings/mockazon_ring/cryptoKeys/sql_pass
   secretEnv:
-    JDBC_PASSWORD: CiQAhVODvPtbGti6rQOhfUIQYFI1P0V6CaAevgnbpgSH2SEXnscSMgAGs0POy8+bDut9eo2h5uRWqFGqG3XseACt8Po9jYv+2eeY1gkAVhFlyKlN50/41Fok
+    PASSWORD: CiQAhVODvPtbGti6rQOhfUIQYFI1P0V6CaAevgnbpgSH2SEXnscSMgAGs0POy8+bDut9eo2h5uRWqFGqG3XseACt8Po9jYv+2eeY1gkAVhFlyKlN50/41Fok
 # timeout: "600s"
 
