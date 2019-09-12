@@ -38,7 +38,7 @@ kind: Service
 metadata:
   name: mockazon
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - name: http
     port: 80
