@@ -1,8 +1,24 @@
 steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args:
+    - 'build'
+    - '-f'
+    - 'uat.Dockerfile'
+    - '-t'
+    - 'uatimage:maven-env'
+    - '--build-arg'
+    - 'JDBC_SCHEMA'
+    - 'JDBC_URL'
+    - 'JDBC_USERNAME'
+    - 'JDBC_PASSWORD'
+  env:
+    - 'DATABASE_NAME=postgres'
+    - 'JDBC_SHEMA=mockazon'
+    - 'JDBC_URL=104.154.244.24'
+    - 'JDBC_USERNAME=postgres'
+  secretEnv: ['JDBC_PASSWORD']
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy", "uat/app.yaml"]
-  env: ['DATABASE_NAME=postgres', 'JDBC_SHEMA=mockazon', 'JDBC_URL=104.154.244.24', 'JDBC_USERNAME=postgres']
-  secretEnv: ['JDBC_PASSWORD']
 secrets:
 - kmsKeyName: projects/mockazon/locations/us-central1/keyRings/mockazon_ring/cryptoKeys/sql_pass
   secretEnv:

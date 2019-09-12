@@ -7,5 +7,4 @@ ENV JDBC_PASSWORD="postgres"
 COPY . /app
 WORKDIR /app
 RUN mvn install
-CMD java -jar target/Mockazon-0.0.1-SNAPSHOT.jar
-
+# CMD java -jar target/Mockazon-0.0.1-SNAPSHOT.jar
