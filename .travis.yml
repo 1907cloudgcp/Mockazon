@@ -1,7 +1,6 @@
 language: java
 sudo: true
 dist: trusty
-#trusty may be the incorrect distro. Check this if there are problems
 jdk: oraclejdk9
 cache:
   directories:
