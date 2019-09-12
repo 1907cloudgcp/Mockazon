@@ -7,4 +7,4 @@ COPY . /app
 WORKDIR /app
 # RUN mvn install
 COPY target/Mockazon-0.0.1-SNAPSHOT.jar target/Mockazon-0.0.1-SNAPSHOT.jar
-CMD java -jar target/Mockazon-0.0.1-SNAPSHOT.jar 
+CMD java -jar target/Mockazon-0.0.1-SNAPSHOT.jar
