@@ -7,11 +7,13 @@ steps:
   - '--build-arg' 
   - 'JDBC_PASSWORD'
   - '-t'
-  - 'uatimage:maven-env'
+  - 'gcr.io/mockazon/uatimage:maven-env'
   - '.'
   secretEnv: ['JDBC_PASSWORD']
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy", "uat/app.yaml"]
+images:
+  - 'gcr.io/mockazon/uatimage:maven-env'
 secrets:
 - kmsKeyName: projects/mockazon/locations/us-central1/keyRings/mockazon_ring/cryptoKeys/sql_pass
   secretEnv:
