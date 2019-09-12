@@ -3,7 +3,7 @@ steps:
   args:
     - 'build'
     - '-f'
-    - 'uat.Dockerfile'
+    - 'uat.dockerfile'
     - '-t'
     - 'uatimage:maven-env'
     - '--build-arg'

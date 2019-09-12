@@ -25,6 +25,13 @@ spec:
             cpu: 70m
           requests:
             cpu: 70m
+        env:
+        - name: "JDBC_PASSWORD"
+          valueFrom:
+            secretKeyRef:
+              name: jdbc-password
+              key: key
+
 ---
 apiVersion: v1
 kind: Service
