@@ -5,7 +5,7 @@ steps:
   - '-f'
   - 'uat.dockerfile'
   - '--build-arg' 
-  - 'JDBC_PASSWORD=$PASSWORD'
+  - 'JDBC_PASSWORD=$$PASSWORD'
   - '-t'
   - 'uatimage:maven-env'
   - '.'
