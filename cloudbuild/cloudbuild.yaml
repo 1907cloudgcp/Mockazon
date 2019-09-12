@@ -5,7 +5,7 @@ steps:
   - '-f'
   - 'uat.dockerfile'
   - '--build-arg' 
-  - 'JDBC_PASSWORD=$$PASSWORD'
+  - 'JDBC_PASSWORD=$PASSWORD'
   - '-t'
   - 'uatimage:maven-env'
   - '.'
@@ -15,6 +15,6 @@ steps:
 secrets:
 - kmsKeyName: projects/mockazon/locations/us-central1/keyRings/mockazon_ring/cryptoKeys/sql_pass
   secretEnv:
-    PASSWORD: CiQAhVODvP6royI1AbxiWUu2zJFOoFiXgNQPafiSiEi2zw0UUdISMgAGs0POZPydkTqjG9ylueomOKakHw/aWZKSG72ts5zEQTg0I/eBAOZd2lBITBZZdVpt
+    PASSWORD: CiQAhVODvPL3VYomhkxzxe8yy6UNdltNSgZydabedUWAJ52bPA4SMgAGs0POesnjLUz7IO+84hlzcjbPLeKzJecewYREDJa1GSaK5bjGVERls89XWlATMJbh
 # timeout: "600s"
 
