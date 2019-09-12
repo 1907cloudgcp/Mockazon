@@ -15,7 +15,7 @@ spec:
         image: gcr.io/gcpdemosbmongeon/mockazon:v1.0
         imagePullPolicy: Always
         ports:
-        - containerPort: 8000
+        - containerPort: 8080
         readinessProbe:
           httpGet:
             path: /
