@@ -11,6 +11,7 @@ steps:
     - 'JDBC_URL'
     - 'JDBC_USERNAME'
     - 'JDBC_PASSWORD'
+    - '.'
   env:
     - 'DATABASE_NAME=postgres'
     - 'JDBC_SHEMA=mockazon'
