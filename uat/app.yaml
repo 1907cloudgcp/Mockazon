@@ -9,6 +9,6 @@ resources:
  memory_gb: 1.0
  disk_size_gb: 10
 
-skip_files:
- - cloudbuild.yaml
-   ignore/
+# skip_files:
+#  - cloudbuild.yaml
+#    ignore/
