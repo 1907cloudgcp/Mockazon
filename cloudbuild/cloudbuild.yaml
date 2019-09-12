@@ -1,22 +1,13 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
   args:
-    - 'build'
-    - '-f'
-    - 'uat.dockerfile'
-    - '-t'
-    - 'uatimage:maven-env'
-    - '--build-arg'
-    - 'JDBC_SCHEMA'
-    - 'JDBC_URL'
-    - 'JDBC_USERNAME'
-    - 'JDBC_PASSWORD'
-    - '.'
-  env:
-    - 'DATABASE_NAME=postgres'
-    - 'JDBC_SHEMA=mockazon'
-    - 'JDBC_URL=104.154.244.24'
-    - 'JDBC_USERNAME=postgres'
+  - 'build'
+  - '-f'
+  - 'uat.dockerfile'
+  - '--build-arg JDBC_PASSWORD=$$PASSWORD'
+  - '-t'
+  - 'uatimage:maven-env'
+  - '.'
   secretEnv: ['JDBC_PASSWORD']
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy", "uat/app.yaml"]
